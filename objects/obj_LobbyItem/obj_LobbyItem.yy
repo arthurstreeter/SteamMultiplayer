@@ -3,11 +3,12 @@
   "%Name":"obj_LobbyItem",
   "eventList":[
     {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
   "name":"obj_LobbyItem",
   "overriddenProperties":[
-    {"$GMOverriddenProperty":"","%Name":"","name":"","objectId":{"name":"obj_Button","path":"objects/obj_Button/obj_Button.yy",},"propertyId":{"name":"text","path":"objects/obj_Button/obj_Button.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"text",},
+    {"$GMOverriddenProperty":"","%Name":"","name":"","objectId":{"name":"obj_Button","path":"objects/obj_Button/obj_Button.yy",},"propertyId":{"name":"text","path":"objects/obj_Button/obj_Button.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"",},
   ],
   "parent":{
     "name":"UI",
@@ -32,7 +33,7 @@
   "physicsStartAwake":true,
   "properties":[
     {"$GMObjectProperty":"","%Name":"lobby_index","filters":[],"listItems":[],"multiselect":false,"name":"lobby_index","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"0","varType":1,},
-    {"$GMObjectProperty":"","%Name":"lobby_id","filters":[],"listItems":[],"multiselect":false,"name":"lobby_id","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"999999","varType":1,},
+    {"$GMObjectProperty":"","%Name":"lobby_id","filters":[],"listItems":[],"multiselect":false,"name":"lobby_id","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"-1","varType":1,},
     {"$GMObjectProperty":"","%Name":"lobby_creator","filters":[],"listItems":[],"multiselect":false,"name":"lobby_creator","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"SteamPlayer","varType":2,},
   ],
   "resourceType":"GMObject",
