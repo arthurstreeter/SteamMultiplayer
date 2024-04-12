@@ -23,6 +23,7 @@
   "ResourceOrderSettings":[
     {"name":"obj_Bullet","order":1,"path":"objects/obj_Bullet/obj_Bullet.yy",},
     {"name":"obj_Entity","order":2,"path":"objects/obj_Entity/obj_Entity.yy",},
+    {"name":"obj_Game","order":13,"path":"objects/obj_Game/obj_Game.yy",},
     {"name":"obj_LobbyItem","order":3,"path":"objects/obj_LobbyItem/obj_LobbyItem.yy",},
     {"name":"obj_LobbyList","order":2,"path":"objects/obj_LobbyList/obj_LobbyList.yy",},
     {"name":"obj_MainMenu","order":1,"path":"objects/obj_MainMenu/obj_MainMenu.yy",},
@@ -30,7 +31,6 @@
     {"name":"obj_SpawnPoint","order":3,"path":"objects/obj_SpawnPoint/obj_SpawnPoint.yy",},
     {"name":"obj_Steam","order":2,"path":"objects/obj_Steam/obj_Steam.yy",},
     {"name":"obj_Wall","order":3,"path":"objects/obj_Wall/obj_Wall.yy",},
-    {"name":"obj_Game","order":13,"path":"objects/obj_Game/obj_Game.yy",},
     {"name":"rm_GameRoom","order":1,"path":"rooms/rm_GameRoom/rm_GameRoom.yy",},
     {"name":"Input","order":1,"path":"scripts/Input/Input.yy",},
     {"name":"PlayerMovement","order":2,"path":"scripts/PlayerMovement/PlayerMovement.yy",},

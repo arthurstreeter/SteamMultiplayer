@@ -1,2 +1,3 @@
-/// @description Restart Game
-game_restart();
+///// @description Restart Game
+//Logic moved to obj_Steam
+//game_restart();
