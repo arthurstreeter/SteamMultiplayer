@@ -35,7 +35,7 @@ while(steam_net_packet_receive()){
 			break
 			
 		case NETWORK_PACKETS.SPAWN_SELF:
-			for (var _i = 0; _i < playerList; _i++){
+			for (var _i = 0; _i < array_length(playerList); _i++){
 				if playerList[_i].steamID == steamID then lobbyMemberID = playerList[_i].lobbyMemberID	
 			}
 			var _layer = layer_get_id("Instances");
