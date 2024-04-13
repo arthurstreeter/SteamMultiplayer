@@ -19,28 +19,32 @@ while(steam_net_packet_receive()){
 			var _x = buffer_read(inbuf, buffer_u16)
 			var _y = buffer_read(inbuf, buffer_u16)
 			var _steamID = buffer_read(inbuf, buffer_u64)
+			var _num = array_length(playerList)
 			var _inst = instance_create_layer(_x,_y,_layer,obj_Player,{
 							steamName : steam_get_user_persona_name(_steamID),
 							steamID : _steamID,
-							lobbyMemberID : steam_lobby_get_member_id(_steamID)
+							lobbyMemberID : _num
 							})
 			array_push(playerList, {
 				steamID	 : _steamID,
 				steamName: steam_get_user_persona_name(_steamID),
-				character: _inst
+				character: _inst,
+				lobbyMemberID : _num
 			})
 				
 			break
 			
 		case NETWORK_PACKETS.SPAWN_SELF:
-			lobbyMemberID = steam_lobby_get_member_id()
+			for (var _i = 0; _i < playerList; _i++){
+				if playerList[_i].steamID == steamID then lobbyMemberID = playerList[_i].lobbyMemberID	
+			}
 			var _layer = layer_get_id("Instances");
 			var _x = buffer_read(inbuf, buffer_u16)
 			var _y = buffer_read(inbuf, buffer_u16)
 			var _inst = instance_create_layer(_x,_y,_layer,obj_Player,{
 							steamName	: steamName,
 							steamID: steamID,
-							lobbyMemberID: steam_lobby_get_member_id()
+							lobbyMemberID: lobbyMemberID
 						})
 			playerList[0].character = _inst
 			character = _inst

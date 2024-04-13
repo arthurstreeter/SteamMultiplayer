@@ -10,4 +10,3 @@ if (actionKey == 1 && currentCooldown <= 0){
 	currentCooldown = fireCooldown
 }
 
-

@@ -30,11 +30,12 @@ function client_player_spawn_at_pos(_player_info) {
 	var _layer = layer_get_id("Instances");
 	var _name = _player_info.steamName
 	var _steamID = _player_info.steamID
+	var _num = _player_info.lobbyMemberID
 	var _loc = _player_info.startPos
 	var _inst = instance_create_layer(_loc.x,_loc.y,_layer,obj_Player,{
 		steamName : _name,
 		steamID : _steamID,
-		lobbyMemberID: steam_lobby_get_member_id(_steamID)
+		lobbyMemberID: _num
 	})
 	return _inst
 }
