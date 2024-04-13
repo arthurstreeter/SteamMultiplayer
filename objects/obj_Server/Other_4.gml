@@ -7,7 +7,7 @@ for (var _player = 0; _player < array_length(playerList); _player++) {
 								{
 									steamName	: playerList[_player].steamName,
 									steamID: playerList[_player].steamID,
-									playerNum: _player
+									lobbyMemberID: playerList[_player].lobbyMemberID
 								})
 	playerList[_player].character = _inst
 	playerList[_player].startPos = _pos
