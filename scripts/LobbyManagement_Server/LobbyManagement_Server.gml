@@ -2,7 +2,7 @@
 ///@self obj_Server
 function send_player_sync(_steam_id){
 	var _b = buffer_create(1, buffer_grow, 1);
-	buffer_write(_b, buffer_u8, CLIENT_PACKETS.SYNC_PLAYERS);
+	buffer_write(_b, buffer_u8, NETWORK_PACKETS.SYNC_PLAYERS);
 	buffer_write(_b, buffer_string, shrink_player_list());
 	steam_net_packet_send(_steam_id, _b)
 	buffer_delete(_b);
@@ -13,7 +13,7 @@ function send_player_sync(_steam_id){
 function send_player_spawn(_steam_id, _slot) {
 	var _pos = grab_spawn_point(_slot)
 	var _b = buffer_create(5, buffer_fixed, 1); //1+2+2
-	buffer_write(_b, buffer_u8, CLIENT_PACKETS.SPAWN_SELF);//1
+	buffer_write(_b, buffer_u8, NETWORK_PACKETS.SPAWN_SELF);//1
 	buffer_write(_b, buffer_u16, _pos.x);//2
 	buffer_write(_b, buffer_u16, _pos.y);//2
 	steam_net_packet_send(_steam_id, _b)
@@ -25,7 +25,7 @@ function send_player_spawn(_steam_id, _slot) {
 ///@self obj_Server
 function send_other_player_spawn(_steam_id, _pos) {
 	var _b = buffer_create(13, buffer_fixed, 1); //1+2+2+8
-	buffer_write(_b, buffer_u8, CLIENT_PACKETS.SPAWN_OTHER);//1
+	buffer_write(_b, buffer_u8, NETWORK_PACKETS.SPAWN_OTHER);//1
 	buffer_write(_b, buffer_u16, _pos.x);//2
 	buffer_write(_b, buffer_u16, _pos.y);//2
 	buffer_write(_b, buffer_u64, _steam_id);//8

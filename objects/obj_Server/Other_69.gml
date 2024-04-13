@@ -1,10 +1,9 @@
-/// @descrip
 switch(async_load[?"event_type"])
 { 
-	
-	case "p2p_session_request":
+	case "lobby_chat_update":
 		var _fromID = async_load[?"user_id"]; //SteamID
 		var _fromName = steam_get_user_persona_name_sync(_fromID); //Steam Player Name
+		show_debug_message("Player Joined: " + _fromName)
 		var _slot = array_length(playerList)
 		array_push(playerList, 
 		{

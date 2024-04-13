@@ -9,12 +9,12 @@ while(steam_net_packet_receive()){
 	var _type = buffer_read(inbuf, buffer_u8);
 	
 	switch _type{
-		case CLIENT_PACKETS.SYNC_PLAYERS:
+		case NETWORK_PACKETS.SYNC_PLAYERS:
 			var _playerList = buffer_read(inbuf, buffer_string);
 			_playerList = json_parse(_playerList)
 			sync_players(_playerList)
 			break
-		case CLIENT_PACKETS.SPAWN_OTHER:
+		case NETWORK_PACKETS.SPAWN_OTHER:
 			var _layer = layer_get_id("Instances_1");
 			var _x = buffer_read(inbuf, buffer_u16)
 			var _y = buffer_read(inbuf, buffer_u16)
@@ -31,7 +31,7 @@ while(steam_net_packet_receive()){
 				
 			break
 			
-		case CLIENT_PACKETS.SPAWN_SELF:
+		case NETWORK_PACKETS.SPAWN_SELF:
 			var _layer = layer_get_id("Instances");
 			var _x = buffer_read(inbuf, buffer_u16)
 			var _y = buffer_read(inbuf, buffer_u16)
