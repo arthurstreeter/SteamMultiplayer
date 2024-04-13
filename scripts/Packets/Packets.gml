@@ -1,0 +1,7 @@
+
+enum CLIENT_PACKETS {
+	SPAWN_OTHER = 97,
+	SPAWN_SELF = 98,
+	SYNC_PLAYERS = 99
+	
+}
