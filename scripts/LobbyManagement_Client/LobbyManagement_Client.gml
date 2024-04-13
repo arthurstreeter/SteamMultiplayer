@@ -34,6 +34,7 @@ function client_player_spawn_at_pos(_player_info) {
 	var _inst = instance_create_layer(_loc.x,_loc.y,_layer,obj_Player,{
 		steamName : _name,
 		steamID : _steamID,
+		lobbyMemberID: steam_lobby_get_member_id(_steamID)
 	})
 	return _inst
 }

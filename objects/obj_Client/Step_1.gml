@@ -21,7 +21,8 @@ while(steam_net_packet_receive()){
 			var _steamID = buffer_read(inbuf, buffer_u64)
 			var _inst = instance_create_layer(_x,_y,_layer,obj_Player,{
 							steamName : steam_get_user_persona_name(_steamID),
-							steamID : _steamID
+							steamID : _steamID,
+							lobbyMemberID : steam_lobby_get_member_id(_steamID)
 							})
 			array_push(playerList, {
 				steamID	 : _steamID,
@@ -32,15 +33,18 @@ while(steam_net_packet_receive()){
 			break
 			
 		case NETWORK_PACKETS.SPAWN_SELF:
+			lobbyMemberID = steam_lobby_get_member_id()
 			var _layer = layer_get_id("Instances");
 			var _x = buffer_read(inbuf, buffer_u16)
 			var _y = buffer_read(inbuf, buffer_u16)
 			var _inst = instance_create_layer(_x,_y,_layer,obj_Player,{
 							steamName	: steamName,
-							steamID: steamID
+							steamID: steamID,
+							lobbyMemberID: steam_lobby_get_member_id()
 						})
 			playerList[0].character = _inst
 			character = _inst
+			character.image_index = lobbyMemberID
 			break
 		default:
 			show_debug_message("Unknown packet received")

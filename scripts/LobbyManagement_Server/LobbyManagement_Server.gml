@@ -53,7 +53,8 @@ function server_player_spawn_at_pos(_steam_id, _pos) {
 		if playerList[_i].steamID == _steam_id {
 		var _inst = instance_create_layer(_pos.x, _pos.y,_layer,obj_Player, {
 							steamName	: playerList[_i].steamName,
-							steamID: _steam_id
+							steamID: _steam_id,
+							lobbyMemberID: steam_lobby_get_member_id(_steam_id)
 					})
 		playerList[_i].character = _inst
 		}
