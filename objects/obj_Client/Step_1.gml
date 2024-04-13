@@ -44,7 +44,7 @@ while(steam_net_packet_receive()){
 						})
 			playerList[0].character = _inst
 			character = _inst
-			character.image_index = lobbyMemberID
+			playerList[0].lobbyMemberID = lobbyMemberID
 			break
 		default:
 			show_debug_message("Unknown packet received")
