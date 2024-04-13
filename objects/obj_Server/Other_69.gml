@@ -12,7 +12,7 @@ switch(async_load[?"event_type"])
 				steamName: _fromName,
 				character: undefined,
 				startPos: grab_spawn_point(_slot),
-				lobbyMemberID: steam_lobby_get_member_id(_fromID)
+				lobbyMemberID: _slot
 			})
 			send_player_sync(_fromID);
 			send_player_spawn(_fromID, _slot);
