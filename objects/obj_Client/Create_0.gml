@@ -9,7 +9,6 @@ lobbyMemberID = undefined
 character = undefined
 
 inbuf = buffer_create(16, buffer_grow, 1);
-outbuf = buffer_create(16, buffer_grow, 1);
 
 playerList[0] = {
 	steamID		: steamID,

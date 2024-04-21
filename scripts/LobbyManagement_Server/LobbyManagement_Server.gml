@@ -30,7 +30,7 @@ function send_other_player_spawn(_steam_id, _pos) {
 	buffer_write(_b, buffer_u16, _pos.y);//2
 	buffer_write(_b, buffer_u64, _steam_id);//8
 	for (var _i = 1; _i < array_length(playerList); _i++){
-		if (playerList[_i].steamID != _steam_id && _steam_id != steamID) {
+		if (playerList[_i].steamID != _steam_id) {
 			steam_net_packet_send(playerList[_i].steamID, _b)
 		}
 	}
