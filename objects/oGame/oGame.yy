@@ -1,12 +1,11 @@
 {
   "$GMObject":"",
-  "%Name":"obj_Game",
+  "%Name":"oGame",
   "eventList":[
     {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":27,"eventType":5,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":82,"eventType":9,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_Game",
+  "name":"oGame",
   "overriddenProperties":[],
   "parent":{
     "name":"Objects",
